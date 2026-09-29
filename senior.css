@@ -1,0 +1,324 @@
+/*
+   SENIOR CONTACT PAGE
+   */
+
+.senior-page {
+    padding: 10px 5px 40px;
+    display: inline;
+}
+
+
+/* 
+   HEADER
+    */
+
+.senior-header {
+    margin-bottom: 25px;
+}
+
+
+.senior-header h1 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+
+.senior-header p {
+    color: #777;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   SEARCH
+   ========================================== */
+
+.senior-search {
+    max-width: 650px;
+
+    background: white;
+
+    border: 1px solid #e1e1e1;
+
+    border-radius: 8px;
+
+    padding: 13px 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+.senior-search i {
+    color: #888;
+
+    font-size: 16px;
+}
+
+
+.senior-search input {
+    border: none;
+
+    outline: none;
+
+    width: 100%;
+
+    font-size: 15px;
+
+    color: #333;
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+   ========================================== */
+
+.senior-container {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+.senior-section-header {
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    padding-bottom: 18px;
+}
+
+
+.senior-section-header h2 {
+    font-size: 23px;
+
+    margin-bottom: 6px;
+}
+
+
+.senior-section-header p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   SENIOR GRID
+   ========================================== */
+
+.senior-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* ==========================================
+   SENIOR CARD
+   ========================================== */
+
+.senior-card {
+    border: 1px solid #eeeeee;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    transition: 0.2s ease;
+}
+
+
+.senior-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================================
+   AVATAR
+   ========================================== */
+
+.senior-avatar {
+    width: 58px;
+
+    height: 58px;
+
+    min-width: 58px;
+
+    border-radius: 50%;
+
+    background: #eef2ff;
+
+    color: #5146e5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   DETAILS
+   ========================================== */
+
+.senior-details {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.senior-details h3 {
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+
+.senior-details p {
+    font-size: 14px;
+
+    color: #555;
+
+    margin-bottom: 4px;
+}
+
+
+.senior-details span {
+    font-size: 13px;
+
+    color: #888;
+}
+
+
+/* ==========================================
+   CONNECT BUTTON
+   ========================================== */
+
+.connect-btn {
+    border: none;
+
+    background: #5146e5;
+
+    color: white;
+
+    padding: 9px 13px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+
+.connect-btn i {
+    margin-right: 5px;
+}
+
+
+.connect-btn:hover {
+    background: #4338ca;
+}
+
+
+/* ==========================================
+   NO RESULTS
+   ========================================== */
+
+.no-seniors {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: #888;
+}
+
+
+.no-seniors i {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+
+.no-seniors h3 {
+    margin-bottom: 7px;
+
+    color: #444;
+}
+
+
+.no-seniors p {
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .senior-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .senior-container {
+        padding: 18px;
+    }
+
+
+    .senior-card {
+        flex-wrap: wrap;
+    }
+
+
+    .connect-btn {
+        width: 100%;
+
+        margin-top: 5px;
+    }
+
+}

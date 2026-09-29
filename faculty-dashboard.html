@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Faculty Dashboard - Campus Connect</title>
+
+    <link
+        rel="stylesheet"
+        href="faculty-dashboard.css"
+    >
+    <link rel="stylesheet" href="facultyprofile.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+
+<!-- ================================
+     TOP BAR
+     ================================= -->
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <i class="fa-solid fa-users"></i>
+
+        <span>Campus Connect</span>
+
+    </div>
+
+
+    <div class="top-right">
+
+        <i class="fa-solid fa-bell"></i>
+
+
+        <div class="user-info">
+
+            <div class="user-photo">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong id="faculty-name">
+                    Faculty
+                </strong>
+
+                <small>
+                    Faculty
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================================
+     SIDEBAR
+     ================================= -->
+
+<aside class="sidebar">
+
+
+    <a
+        href="#"
+        class="sidebar-link active"
+        data-page="home"
+    >
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>Dashboard</span>
+
+    </a>
+
+
+    <a
+        href="#"
+        class="sidebar-link"
+        data-page="notices"
+    >
+
+        <i class="fa-solid fa-bullhorn"></i>
+
+        <span>Notices</span>
+
+    </a>
+
+
+    <a
+        href="#"
+        class="sidebar-link"
+        data-page="materials"
+    >
+
+        <i class="fa-solid fa-book"></i>
+
+        <span>Study Material</span>
+
+    </a>
+
+
+    <a
+        href="#"
+        class="sidebar-link"
+        data-page="events"
+    >
+
+        <i class="fa-solid fa-calendar-days"></i>
+
+        <span>Events</span>
+
+    </a>
+
+
+    <a
+        href="#"
+        class="sidebar-link"
+        data-page="students"
+    >
+
+        <i class="fa-solid fa-user-graduate"></i>
+
+        <span>Students</span>
+
+    </a>
+
+
+    <a
+        href="#"
+        class="sidebar-link"
+        data-page="profile"
+    >
+
+        <i class="fa-regular fa-user"></i>
+
+        <span>My Profile</span>
+
+    </a>
+
+
+    <a
+        href="#"
+        class="sidebar-link logout"
+        id="logout-btn"
+    >
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        <span>Logout</span>
+
+    </a>
+
+</aside>
+
+
+
+<!-- ================================
+     MAIN CONTENT
+     ================================= -->
+
+<main class="main-content" id="main-content">
+
+
+    <!-- ============================
+         DASHBOARD HOME
+         ============================= -->
+
+    <section id="home-page">
+
+
+        <div class="page-heading">
+
+            <h1>Faculty Dashboard</h1>
+
+            <h2>
+                Hello,
+                <span id="welcome-name">
+                    Faculty
+                </span>!
+            </h2>
+
+            <p>
+                Manage your campus activities and
+                connect with your students.
+            </p>
+
+        </div>
+
+
+
+        <!-- STAT CARDS -->
+
+        <div class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div>
+
+                    <h3>Notices</h3>
+
+                    <strong id="notice-count">
+                        0
+                    </strong>
+
+                    <p>
+                        Published notices
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-bullhorn"></i>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div>
+
+                    <h3>Materials</h3>
+
+                    <strong id="material-count">
+                        0
+                    </strong>
+
+                    <p>
+                        Uploaded materials
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-book"></i>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div>
+
+                    <h3>Events</h3>
+
+                    <strong id="event-count">
+                        0
+                    </strong>
+
+                    <p>
+                        Campus events
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div>
+
+                    <h3>Students</h3>
+
+                    <strong id="student-count">
+                        0
+                    </strong>
+
+                    <p>
+                        Registered students
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="section-card">
+
+            <h2>Quick Actions</h2>
+
+
+            <div class="quick-actions">
+
+
+                <button
+                    class="action-btn"
+                    data-page="notices"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span>
+                        Add Notice
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="action-btn"
+                    data-page="materials"
+                >
+
+                    <i class="fa-solid fa-upload"></i>
+
+                    <span>
+                        Upload Material
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="action-btn"
+                    data-page="events"
+                >
+
+                    <i class="fa-solid fa-calendar-plus"></i>
+
+                    <span>
+                        Create Event
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="action-btn"
+                    data-page="students"
+                >
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>
+                        View Students
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- ============================
+         NOTICES
+         ============================= -->
+
+    <section
+        id="notices-page"
+        class="content-page hidden"
+    >
+
+        <div class="page-heading">
+
+            <h1>Notices</h1>
+
+            <p>
+                Create and manage campus notices.
+            </p>
+
+        </div>
+
+
+        <div class="section-card">
+
+            <div class="section-header">
+
+                <h2>Manage Notices</h2>
+
+
+                <button class="primary-btn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Notice
+
+                </button>
+
+            </div>
+
+
+            <div class="empty-state">
+
+                <i class="fa-solid fa-bullhorn"></i>
+
+                <p>
+                    No notices available yet.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ============================
+         STUDY MATERIAL
+         ============================= -->
+
+    <section
+        id="materials-page"
+        class="content-page hidden"
+    >
+
+        <div class="page-heading">
+
+            <h1>Study Material</h1>
+
+            <p>
+                Upload and manage study materials.
+            </p>
+
+        </div>
+
+
+        <div class="section-card">
+
+            <div class="section-header">
+
+                <h2>Manage Materials</h2>
+
+
+                <button class="primary-btn">
+
+                    <i class="fa-solid fa-upload"></i>
+
+                    Upload Material
+
+                </button>
+
+            </div>
+
+
+            <div class="empty-state">
+
+                <i class="fa-solid fa-book"></i>
+
+                <p>
+                    No study material uploaded yet.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ============================
+         EVENTS
+         ============================= -->
+
+    <section
+        id="events-page"
+        class="content-page hidden"
+    >
+
+        <div class="page-heading">
+
+            <h1>Events</h1>
+
+            <p>
+                Create and manage campus events.
+            </p>
+
+        </div>
+
+
+        <div class="section-card">
+
+            <div class="section-header">
+
+                <h2>Manage Events</h2>
+
+
+                <button class="primary-btn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Create Event
+
+                </button>
+
+            </div>
+
+
+            <div class="empty-state">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <p>
+                    No events available yet.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ============================
+         STUDENTS
+         ============================= -->
+
+    <section
+        id="students-page"
+        class="content-page hidden"
+    >
+
+        <div class="page-heading">
+
+            <h1>Students</h1>
+
+            <p>
+                Search and view registered students.
+            </p>
+
+        </div>
+
+
+        <div class="section-card">
+
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="student-search"
+                    placeholder="Search students..."
+                >
+
+            </div>
+
+
+            <div id="student-list">
+
+                <div class="empty-state">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <p>
+                        Student list will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ============================
+         FACULTY PROFILE
+         ============================= -->
+
+    <section
+        id="profile-page"
+        class="content-page hidden"
+    >
+
+        <div id="faculty-profile-container"></div>
+
+    </section>
+
+
+</main>
+
+
+
+<script src="faculty-dashboard.js"></script>
+
+</body>
+
+</html>

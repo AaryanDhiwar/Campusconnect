@@ -1,0 +1,138 @@
+.materials-page {
+    width: 100%;
+    height: 91%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.material-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.material-header h2 {
+    color: #111827;
+}
+
+.material-header p {
+    margin-top: 5px;
+    color: #6B7280;
+}
+
+.upload-btn {
+    border: none;
+    background: #4F46E5;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.upload-btn:hover {
+    background: #4338CA;
+}
+
+.material-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.material-tabs button {
+    border: none;
+    background: #F3F4F6;
+    color: #6B7280;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.material-tabs .selected {
+    background: #EEF2FF;
+    color: #4F46E5;
+}
+
+.material-table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.table-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 1.2fr 1fr 1fr;
+    align-items: center;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #E5E7EB;
+    color: #4B5563;
+    font-size: 14px;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-head {
+    background: #F9FAFB;
+    color: #374151;
+    font-weight: 600;
+}
+
+.material-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #111827;
+}
+
+.material-title i {
+    color: #4F46E5;
+}
+
+.download-btn {
+    padding: 7px 14px;
+    border: 1px solid #C7D2FE;
+    background: #EEF2FF;
+    color: #4F46E5;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background: #4F46E5;
+    color: white;
+}
+
+@media (max-width: 800px) {
+
+    .materials-page {
+        width: 100%;
+       
+    }
+
+    .material-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    
+    .material-tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .material-table {
+        overflow-x: auto;
+    }
+
+    .table-row {
+        min-width: 750px;
+    }
+}

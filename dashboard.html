@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="notices.css">
+    <link rel="stylesheet" href="materail.css">
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="senior.css">
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="stylesheet" href="logout.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="layout">
+        <nav>
+            <h2>Campus Connect</h2>
+            <div id="navright">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-regular fa-bell"></i>
+                <div id="navright">
+
+                    <img src="./images.jpeg" alt="">
+                    <div>
+                        <strong id="nav-user-name">User</strong> <br>
+                        <small id="nav-user-role">Student</small>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <i class="fa-solid fa-bars" id="menuIcon"></i>
+            <div class="Sidebar" id="Sidebar">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-house"></i>Dashboard</a> </li>
+                    <li><a href="#" id="profile-btn"><i class="fa-regular fa-user"></i>Profile</a> </li>
+                    <li><a href="" id="notices-btn"><i class="fa-regular fa-bell"></i>Notices</a></li>
+                    <li><a href="" id="material-btn"><i class="fa-regular fa-folder"></i>Materials</a></li>
+                    <li><a href="" id="events-btn"><i class="fa-regular fa-calendar"></i>Events</a></li>
+                    <li>
+                        <a href="#" id="senior-btn">
+                            <i class="fa-solid fa-users"></i>
+                            Senior Contact
+                        </a>
+                    </li>
+                    <li><a href="" id="feedback-btn"><i class="fa-regular fa-comment-dots"></i>Feedback</a></li>
+                    <li><a href="" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                </ul>
+            </div>
+            <div class="DashboardCards" id="main-content">
+                <h2 style="margin-top: 18px;">Dashboard</h2>
+                <h1 id="welcome-user">Hello, User!</h1>
+                <p style="margin-bottom: 20px; color: gray;">Here's what's happening in your campus.</p>
+                <div class="Features">
+                    <div class="Featuresbox">
+
+                        <div>
+                            <strong>Notices</strong>
+                            <h1>12</h1>
+                            <small>New Updates</small>
+                        </div>
+                        <i style="color: #3B82F6 ;" class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <div class="Featuresbox">
+
+                        <div>
+                            <strong>Material</strong>
+                            <h1>25</h1>
+                            <small>Available Files</small>
+                        </div>
+                        <i style="color: #10B981;" class="fa-solid fa-folder"></i>
+                    </div>
+                    <div class="Featuresbox">
+
+
+                        <div>
+                            <strong>Events</strong>
+                            <h1>8</h1>
+                            <small>Upcoming Events</small>
+                        </div>
+                        <i style="color:#F59E0B ;" class="fa-regular fa-calendar"></i>
+                    </div>
+                    <div class="Featuresbox">
+
+                        <div>
+                            <strong>Connections</strong>
+                            <h1>15</h1>
+                            <small>Senior Connecions</small>
+                        </div>
+                        <i style="color:#8B5CF6 ;" class="fa-solid fa-user-group"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box1">
+                        <div class="info">
+                            <strong style="font-weight: 900; font-size: 25px;">Recent Notices</strong>
+                            <small style="font-size: 18px; color: #8B5CF6;">View all</small>
+                        </div>
+                        <hr>
+                        <div class="info">
+
+                            <div>
+                                &nbsp; <i style="color: #3B82F6;" class="fa-regular fa-file-lines"></i>
+                                <strong>Internal Exam Schedule</strong>
+                                <p>The internal examition schedule is <br>published.Check now</p>
+                            </div>
+                            <small>07 May 2024</small>
+                        </div>
+                        <hr>
+                        <div class="info">
+
+                            <div>
+                                <i style="color: palevioletred;" class="fa-solid fa-laptop-code"></i>
+                                <strong>Workshop on Web Development</strong>
+                                <p>Hands-on Workshop on Full-Stack <br> Web Development.</p>
+                            </div>
+                            <small>08 May 2024</small>
+                        </div>
+                        <hr>
+                        <div class="info">
+
+                            <div>
+                                <i style="color: purple;" class="fa-solid fa-star"></i>
+                                <strong>College Annual Fest</strong>
+                                <p>Join us for the biggest event of the year!</p>
+                            </div>
+                            <small>09 May 2024</small>
+                        </div>
+                    </div>
+                    <div class="box2" id="upcoming-events">
+                        <div class="info2">
+                            <strong style="font-size: 25px; font-weight: 900; margin-right: auto;">Upcoming
+                                Events</strong>
+                            <small style="font-size: 18px; color: #8B5CF6; margin-top: 8px;">View all</small>
+                        </div>
+                        <hr>
+                        <div class="event" style="margin-top: 20px;">
+                            <div class="info2">
+                                <i style="color:#2563eb ; background:#dbeafe ;"
+                                    class="fa-regular fa-calendar-check"></i>
+                                <div>
+                                    <strong>Tech Talk</strong> <br>
+                                    <small>10 may 2024</small>
+                                </div>
+                            </div>
+
+                            <div class="info2">
+                                <i style="color:#10b981 ; background:#d1fae5  ; font-size: 14px;"
+                                    class="fa-solid fa-code"></i>
+                                <div>
+                                    <strong>Coding Competiton</strong> <br>
+                                    <small>16 may 2024</small>
+                                </div>
+
+                            </div>
+
+                            <div class="info2">
+                                <i style="color:#ef4444 ; background:#fee2e2 ;" class="fa-solid fa-calendar-days"></i>
+                                <div>
+                                    <strong>Annual Fest</strong> <br>
+                                    <small>20 may 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="logout-popup" id="logoutPopup">
+        <div class="logout-box">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <h2>Logout</h2>
+            <p>Are you sure you want to logout?</p>
+
+            <div class="logout-buttons">
+                <button id="cancelLogout">Cancel</button>
+                <button id="confirmLogout">Logout</button>
+            </div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.layout{
+    font-family: 'Poppins',sans-serif;
+    width: 100%;
+}
+nav {
+    padding: 10px 55px 10px 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E5E7EB;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+}
+
+nav #navright {
+    display: flex;
+    align-items: center;
+}
+#navright i:hover{
+    transform: scale(1.5);
+}
+nav i {
+    margin-right: 25px;
+    color: #6B7280;
+    cursor: pointer;
+}
+
+nav img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+nav h2 {
+    color: #4F46E5;
+}
+
+nav strong {
+    color: #111827;
+}
+
+nav small {
+    color: #9CA3AF;
+}
+/* slide icon */
+#menuIcon{
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    color:grey;
+    
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/* sidebar */
+
+.Sidebar{
+   width: 70px;
+    min-height: calc(100vh - 61px);
+   overflow: hidden;
+    transition: width 0.3s ease;  
+     border-right: 1px solid #E5E7EB;
+    box-shadow: 0 11px 10px rgba(0, 0, 0, .09);
+}
+.Sidebar.hide {
+    width: 250px;
+    flex-shrink: 0;
+    transition: width 0.3s ease;  
+}
+.main-content{
+    flex: 1;
+    min-width: 0;
+}
+.Sidebar ul li i:hover{
+    transform: scale(1.50);
+    
+}
+.Sidebar ul li {
+    margin: 40px 15px -40px 10px;
+    list-style: none;
+}
+.Sidebar.hide ul li a:hover {
+ background: rgba(79, 70, 229, 0.20);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    padding: 20px 30px 20px 10px;
+    border-radius: 5px;
+}
+.Sidebar ul li a {
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    display: grid;
+    color: #4F46E5;
+    grid-template-columns: 35px 1fr;
+    padding: 20px 30px 20px 15px;
+    
+}
+
+.Sidebar ul li i {
+    margin-right: 10px;
+    color: #4F46E5; 
+    
+}
+
+section {
+    display: flex;
+}
+
+.DashboardCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+    box-sizing: border-box;
+   
+}
+
+.Features {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+
+}
+.Features .Featuresbox {
+    height: 140px;
+    width: 237px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    line-height: 33px;
+    flex: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.Featuresbox i{
+    font-size: 30px;
+}
+.Featuresbox small,.Featuresbox strong{
+    font-size: 18px;
+}
+.Featuresbox:hover{
+    transform: translateY(-5px);
+}
+
+.box {
+    display: flex;
+    gap: 20px;
+}
+
+.box1 {
+    height: 320px;
+    width: 580px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+     display: flex;
+     flex: 0.5;
+    flex-direction: column;
+    line-height: 20px;
+    justify-content: space-evenly;
+}
+
+.box2 {
+    height: 320px;
+    width: 490px;
+    border-radius: 12px;
+    flex: 0.5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+   
+}
+.box1 .info{
+    display: flex;
+    justify-content: space-between;
+}
+.info i{
+    margin-right: 10px;
+}
+.box1 strong{
+font-weight: 700;
+
+}
+.box1 p{
+    margin-left: 32px;
+    color: rgb(99, 96, 96);
+}
+.box2 i{
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    
+}
+.box2 .info2{
+    display: flex; 
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+.box2 small{
+    color: gray;
+}
+.event .info2{
+  margin-top: 25px;
+}
+
+/* respnsive */
+@media(max-width:800px){
+    .DashboardCards{
+       
+    }
+}

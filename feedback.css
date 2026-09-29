@@ -1,0 +1,135 @@
+.feedback-page {
+    width: 100%;
+   height: 91%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.feedback-header {
+    margin-bottom: 25px;
+}
+
+.feedback-header h2 {
+    color: #111827;
+}
+
+.feedback-header p {
+    margin-top: 5px;
+    color: #6B7280;
+}
+
+.feedback-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.feedback-form,
+.feedback-info-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+}
+
+.feedback-form {
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.feedback-form h3 {
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+.feedback-form label {
+    display: block;
+    margin: 15px 0 7px;
+    color: #374151;
+    font-size: 14px;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #E5E7EB;
+    border-radius: 7px;
+    outline: none;
+    font-family: inherit;
+}
+
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+    border-color: #4F46E5;
+}
+
+.feedback-form textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+.submit-feedback {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background: #4F46E5;
+    color: white;
+    cursor: pointer;
+}
+
+.submit-feedback:hover {
+    background: #4338CA;
+}
+
+.feedback-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feedback-info-card {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.feedback-info-card > i {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: #EEF2FF;
+    color: #4F46E5;
+}
+
+.feedback-info-card h3 {
+    color: #111827;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.feedback-info-card p {
+    color: #6B7280;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@media (max-width: 800px) {
+
+    .feedback-page {
+        padding: 20px;
+    }
+
+    .feedback-layout {
+        grid-template-columns: 1fr;
+    }
+}

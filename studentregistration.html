@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration - Campus Connect</title>
+
+    <link rel="stylesheet" href="studentregistration.css">
+</head>
+
+<body>
+
+    <div class="registration-container">
+
+        <div class="registration-card">
+
+            <div class="logo">
+                <span>🎓</span>
+                <h2>Campus Connect</h2>
+            </div>
+
+            <h1>Student Registration</h1>
+
+            <p class="subtitle">
+                Create your Campus Connect student account
+            </p>
+
+            <form id="studentRegistrationForm">
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="enrollment_no">Enrollment Number</label>
+
+                    <input
+                        type="text"
+                        id="enrollment_no"
+                        name="enrollment_no"
+                        placeholder="Enter enrollment number"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="branch">Branch</label>
+
+                    <input
+                        type="text"
+                        id="branch"
+                        name="branch"
+                        placeholder="e.g. Computer Engineering"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="semester">Semester</label>
+
+                    <input
+                        type="number"
+                        id="semester"
+                        name="semester"
+                        placeholder="e.g. 6"
+                        min="1"
+                        max="8"
+                        required
+                    >
+                </div>
+
+
+                <button type="submit" id="registerBtn">
+                    Register
+                </button>
+
+                <p id="message"></p>
+
+            </form>
+
+
+            <div class="login-link">
+                Already have an account?
+                <a href="studentlogin.html">Login</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const form = document.getElementById("studentRegistrationForm");
+        const message = document.getElementById("message");
+        const registerBtn = document.getElementById("registerBtn");
+
+
+        form.addEventListener("submit", async function(event) {
+
+            event.preventDefault();
+
+            registerBtn.disabled = true;
+            registerBtn.textContent = "Registering...";
+            message.textContent = "";
+            message.className = "";
+
+
+            const studentData = {
+
+                fullname: document.getElementById("fullname").value.trim(),
+
+                email: document.getElementById("email").value.trim(),
+
+                password: document.getElementById("password").value,
+
+                enrollment_no:
+                    document.getElementById("enrollment_no").value.trim(),
+
+                branch:
+                    document.getElementById("branch").value.trim(),
+
+                semester:
+                    document.getElementById("semester").value
+
+            };
+
+
+            try {
+
+                const response = await fetch(
+                    "http://localhost:3000/api/students/register",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify(studentData)
+                    }
+                );
+
+
+                const result = await response.json();
+
+
+                if (response.ok) {
+
+                    message.textContent = result.message;
+                    message.className = "success";
+
+
+                    form.reset();
+
+
+                    setTimeout(() => {
+
+                        window.location.href = "studentlogin.html";
+
+                    }, 1500);
+
+                } else {
+
+                    message.textContent = result.message;
+                    message.className = "error";
+
+                }
+
+
+            } catch (error) {
+
+                console.error(error);
+
+                message.textContent =
+                    "Unable to connect to the server.";
+
+                message.className = "error";
+
+            }
+
+
+            registerBtn.disabled = false;
+            registerBtn.textContent = "Register";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

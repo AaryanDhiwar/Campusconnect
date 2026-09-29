@@ -1,0 +1,245 @@
+/* ==========================================
+   EVENTS PAGE
+   ========================================== */
+
+.events-page {
+    padding: 10px 5px 40px;
+    display: inline;
+}
+
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.events-header {
+    margin-bottom: 30px;
+}
+
+
+.events-header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+
+.events-header p {
+    color: #777;
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   EVENTS CONTAINER
+   ========================================== */
+
+.events-container {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+.events-container > h2 {
+    font-size: 23px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   EVENTS GRID
+   ========================================== */
+
+.events-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* ==========================================
+   EVENT CARD
+   ========================================== */
+
+.event-card {
+    display: flex;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    transition: 0.2s ease;
+}
+
+
+.event-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================================
+   EVENT DATE
+   ========================================== */
+
+.event-date {
+    min-width: 65px;
+
+    height: 75px;
+
+    background: #eef2ff;
+
+    color: #5146e5;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.event-date strong {
+    font-size: 27px;
+
+    line-height: 1;
+}
+
+
+.event-date span {
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-top: 5px;
+}
+
+
+/* ==========================================
+   EVENT CONTENT
+   ========================================== */
+
+.event-content {
+    flex: 1;
+}
+
+
+.event-category {
+    display: inline-block;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    color: #5146e5;
+
+    background: #eef2ff;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    margin-bottom: 8px;
+}
+
+
+.event-content h3 {
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+
+.event-content p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   EVENT INFO
+   ========================================== */
+
+.event-info {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+.event-info span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.event-info i {
+    color: #5146e5;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .events-container {
+        padding: 18px;
+    }
+
+
+    .event-card {
+        flex-direction: column;
+    }
+
+
+    .event-date {
+        width: 65px;
+    }
+
+}

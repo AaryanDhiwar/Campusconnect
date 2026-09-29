@@ -1,0 +1,209 @@
+<section class="Container2">
+
+    <h1 class="title">My Profile</h1>
+
+    <section class="detailinfo">
+
+        <!-- PROFILE IMAGE -->
+        <div style="text-align: center;" class="MyProfile">
+
+            <img
+                src="./images.jpeg"
+                id="profileImage"
+                alt="Profile Image"
+            >
+
+            <br>
+
+            <button
+                class="edt-btn"
+                id="edit-profile-btn"
+            >
+                Edit Profile
+            </button>
+
+        </div>
+
+
+        <!-- PROFILE INFORMATION -->
+        <div class="Carddetail">
+
+            <h2 id="profile-name">
+                Loading...
+            </h2>
+
+
+            <div class="detail">
+
+                <span>Enrollment Number</span>
+
+                <span id="profile-enrollment">
+                    Loading...
+                </span>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>Branch</span>
+
+                <span id="profile-branch">
+                    Loading...
+                </span>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>Semester</span>
+
+                <span id="profile-semester">
+                    Loading...
+                </span>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>Email</span>
+
+                <span id="profile-email">
+                    Loading...
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ABOUT ME -->
+        <div class="cardabout">
+
+            <h4>About Me</h4>
+
+            <p id="profile-about">
+                Loading...
+            </p>
+
+
+            <h4 style="
+                border-top: 1px solid #eeeeee;
+                padding: 11px 0;
+            ">
+                Skills
+            </h4>
+
+
+            <div class="skills">
+
+                <span class="skill">HTML</span>
+
+                <span class="skill">CSS</span>
+
+                <span class="skill">JavaScript</span>
+
+                <span class="skill">Node.js</span>
+
+                <span class="skill">MySQL</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+   
+
+
+    <!-- EDIT PROFILE FORM -->
+
+<div
+    id="edit-profile-section"
+    class="edit-profile-section"
+    style="display: none;"
+>
+
+    <h2>Edit Profile</h2>
+
+
+    <div class="edit-form">
+
+        <label>Full Name</label>
+
+        <input
+            type="text"
+            id="edit-fullname"
+        >
+
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            id="edit-email"
+        >
+
+
+        <label>Enrollment Number</label>
+
+        <input
+            type="text"
+            id="edit-enrollment"
+        >
+
+
+        <label>Branch</label>
+
+        <input
+            type="text"
+            id="edit-branch"
+        >
+
+
+        <label>Semester</label>
+
+        <input
+            type="number"
+            id="edit-semester"
+            min="1"
+            max="8"
+        >
+
+
+        <label>About Me</label>
+
+        <textarea
+            id="edit-about"
+            rows="6"
+            placeholder="Write something about yourself..."
+        ></textarea>
+
+
+        <div class="edit-buttons">
+
+            <button
+                type="button"
+                id="save-profile-btn"
+            >
+                Save Changes
+            </button>
+
+
+            <button
+                type="button"
+                id="cancel-edit-btn"
+            >
+                Cancel
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
